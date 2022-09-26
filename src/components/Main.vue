@@ -6,39 +6,8 @@
     }
 </script>
 
+
 <template>
-    <div class="container">
-        <div class="row justify-content-evenly">
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-evenly">
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-            <div class="col-3">
-                <Content/>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="row justify-content-evenly">
             <div class="col-3">

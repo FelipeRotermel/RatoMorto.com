@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-<div class="container">
+<div class="container-fluid">
     <div class="card mb-3">
       <div class="row g-0">
         <div class="col-md-4">
@@ -21,14 +21,10 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 
-.container {
+.container-fluid {
   margin-top:100px ;
-}
-
-.card {
-  width: 110%;
 }
 
 .progress{
