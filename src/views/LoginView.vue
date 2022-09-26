@@ -48,6 +48,7 @@
 
 .container {
 margin-top: 150px;
+margin-bottom: 100px;
 }
 
 body, html {
