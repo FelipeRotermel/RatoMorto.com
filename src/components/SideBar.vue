@@ -105,7 +105,7 @@
         z-index: 1;
         position: fixed;
         height: 95vh;
-        margin-top: 30px;
+        margin-top: 53px;
         background-color: #fcf5de;
     }
 

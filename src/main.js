@@ -13,3 +13,5 @@ app.use(BootstrapIconsPlugin);
 app.use(router)
 
 app.mount('#app')
+
+window.$ = window.jQuery = require('jquery');

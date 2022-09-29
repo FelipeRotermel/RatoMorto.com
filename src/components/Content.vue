@@ -3,7 +3,7 @@
 
 <template>
     <router-link to="/card1">
-    <div class="card" href="#" style="width: 18rem; ">
+    <div class="card" href="#" style="width: 18rem;">
         <img src="https://fanatical.imgix.net/product/original/68b3eb95-ba46-4ec0-a13f-4f94cf1ab71e.jpg?auto=compress,format&w=400&fit=crop&h=" class="card-img-top" alt="...">
     </div>
     </router-link>
@@ -14,6 +14,10 @@
     a {
         text-decoration: none;
         color: black;
+    }
+
+    img {
+        height: 400px;
     }
 
     .card {
