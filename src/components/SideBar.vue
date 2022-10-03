@@ -1,5 +1,24 @@
-<script></script>
+<script>
+  import axios from "axios";
 
+  export default {
+    data() {
+      return {
+        genres: [
+          {id: 12,
+          name: "bolas"
+        }
+        ],
+      };
+    },
+    methods: {
+      async buscar() {
+        const { data } = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=ac7de9d59c52a09bf0b3c0f69100a5f4&language=pt-br`)
+        this.genres = data
+      },
+    },
+  };
+</script>
 
 <template>
     <label for="flexCheckIndeterminate" id="input"><img src="https://cdn-icons-png.flaticon.com/512/814/814191.png" width="40px" alt=""></label>
@@ -12,70 +31,10 @@
     </a>
     <hr>
     <ul class="nav nav-pills flex-column mb-auto">
-      <li>
+      <li v-for="genre of genres" :key="genre.id">
         <a href="#" class="nav-link text-black">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          Comédia
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-          Terror
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-          Romance
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Ação e aventura
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Drama
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Ficção científica
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Ação
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Musical
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Documentário
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Mistério
-        </a>
-      </li>
-      <li>
-        <a href="#" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-          Dança
+          {{ genre.name }}
         </a>
       </li>
     </ul>
