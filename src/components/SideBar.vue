@@ -27,7 +27,7 @@
     <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
     <div class="sidebar">
     <div class="d-flex flex-column flex-shrink-0 p-3 text-black" id="sidebar" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+    <a class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
     </a>
     <hr>
@@ -72,6 +72,15 @@
         height: 95vh;
         margin-top: 53px;
         background-color: #fcf5de;
+    }
+
+    label{
+      transition: 0.25s;
+      cursor: pointer;
+    }
+
+    label:hover {
+      transform: scale(1.03);
     }
 
     .nav-link {

@@ -24,7 +24,7 @@
 <template>
     <router-link to="/card1">
         <th v-for="movie of movies" :key="movie.id">
-            <div class="col-10 text-center">
+            <div class="col-12 text-center">
                 <a :href="movie.id">
                   <img :src="urlfilme + movie.poster_path" alt="">
                   {{ movie.title }}
@@ -43,22 +43,18 @@
     }
 
     th {
-        max-width: 400px;
-        width: 400px;
-        height: 500px;
+        max-width: 350px;
+        height: 550px;
+        padding: 25px;
+        transition: 0.25s;
     }
 
     img {
         height: 400px;
     }
 
-    .card {
-        transition: 0.25s;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-    }
-
-    .card:hover { 
-        transform: scale(1.05);
-        color: black;
+    th:hover { 
+        transform: scale(0.95);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 </style>
