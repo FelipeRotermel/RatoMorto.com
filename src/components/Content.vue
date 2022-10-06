@@ -1,12 +1,36 @@
 <script>
+    import { mapStores, mapState, mapActions} from 'pinia'
+    import { useMovieStore} from '@/stores/movies'
+    
+    export default {
+      data() {
+        return {
+            urlfilme: "https://image.tmdb.org/t/p/original"
+        };
+      },
+      async created() {
+        await this.get_movies()
+      },
+      computed: {
+        ...mapStores(useMovieStore),
+        ...mapState(useMovieStore, ['movies'])
+      },
+      methods: {
+        ...mapActions(useMovieStore, ['get_movies'])
+      },
+    };
 </script>
 
 <template>
     <router-link to="/card1">
-    <div class="card text-center" href="#" style="width: 18rem;">
-        <img src="https://fanatical.imgix.net/product/original/68b3eb95-ba46-4ec0-a13f-4f94cf1ab71e.jpg?auto=compress,format&w=400&fit=crop&h=" class="card-img-top" alt="...">
-        <p>BadRats Show</p>
-    </div>
+        <th v-for="movie of movies" :key="movie.id">
+            <div class="col-10 text-center">
+                <a :href="movie.id">
+                  <img :src="urlfilme + movie.poster_path" alt="">
+                  {{ movie.title }}
+                </a>
+            </div>
+        </th>
     </router-link>
 </template>
 
@@ -18,8 +42,10 @@
         font-size: 20px;
     }
 
-    p {
-        margin-top: 10px;
+    th {
+        max-width: 400px;
+        width: 400px;
+        height: 500px;
     }
 
     img {

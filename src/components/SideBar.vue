@@ -31,14 +31,14 @@
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
     </a>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-      <li v-for="genre of genres" :key="genre.id">
-        <a :href="genre.id" class="nav-link text-black">
-          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
-          {{ genre.name }}
-        </a>
-      </li>
-    </ul>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li v-for="genre of genres" :key="genre.id">
+          <a :href="genre.id" class="nav-link text-black">
+            <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+            {{ genre.name }}
+          </a>
+        </li>
+      </ul>
     <hr>
   </div>
 </div>
