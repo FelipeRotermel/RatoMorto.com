@@ -52,6 +52,10 @@
 
 <style scoped>
 
+  .carousel {
+    z-index: -1;
+  }
+
   img {
     height: 800px;
     filter: brightness(50%);
