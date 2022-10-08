@@ -1,53 +1,59 @@
 <script></script>
 
 <template>
-<div class="container h-100">
-	<div class="d-flex justify-content-center h-100">
-		<div class="user_card">
-			<div class="d-flex justify-content-center">
-				<div class="brand_logo_container">
-					<img src="https://avatars.githubusercontent.com/u/106554495?v=4" class="brand_logo" alt="Logo">
-				</div>
-			</div>
-			<div class="d-flex justify-content-center text-center form_container">
-				<form>
-					<h4>Login</h4>
-					<div class="input-group mb-3">
-						<div class="input-group-append">
-							<span class="input-group-text"><img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" width="25px" alt=""></span>
-						</div>
-						<input type="text" name="" class="form-control input_user" value="" placeholder="Usuário">
+<label class="container marginLogin">
+	<div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="https://avatars.githubusercontent.com/u/106554495?v=4" class="brand_logo" alt="Logo">
 					</div>
-					<div class="input-group mb-2">
-						<div class="input-group-append">
-							<span class="input-group-text"><img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" width="25px" alt=""></span>
-						</div>
-						<input type="password" name="" class="form-control input_pass" value="" placeholder="Senha">
-					</div>
-						<div class="d-flex justify-content-center mt-3 login_container">
-			 	<button type="button" name="button" class="btn btn-primary">Login</button>
-			   </div>
-				</form>
-			</div>
-	
-			<div class="mt-4">
-				<div class="d-flex justify-content-center links">
-					Não tem uma conta:<router-link to="/cadastro" class="ml-2">Cadastra-se</router-link>
 				</div>
-				<div class="d-flex justify-content-center links">
-					<a href="#">Esqueceu a sua senha?</a>
+				<div class="d-flex justify-content-center text-center form_container">
+					<form>
+						<h4>Login</h4>
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" width="25px" alt=""></span>
+							</div>
+							<input type="text" name="" class="form-control input_user" value="" placeholder="Usuário">
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><img src="https://cdn-icons-png.flaticon.com/512/3064/3064155.png" width="25px" alt=""></span>
+							</div>
+							<input type="password" name="" class="form-control input_pass" value="" placeholder="Senha">
+						</div>
+							<div class="d-flex justify-content-center mt-3 login_container">
+				 	<button type="button" name="button" class="btn btn-primary">Login</button>
+				   </div>
+					</form>
+				</div>
+			
+				<div class="mt-4">
+					<div class="d-flex justify-content-center links">
+						Não tem uma conta:<router-link to="/cadastro" class="ml-2">Cadastra-se</router-link>
+					</div>
+					<div class="d-flex justify-content-center links">
+						<a href="#">Esqueceu a sua senha?</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
+</label>
 </template>
 
 <style scoped>
 
+.marginLogin{
+	margin-top:150px;
+}
+.marginSide {
+	display: none;
+}
 .container {
-margin-top: 150px;
 margin-bottom: 100px;
 }
 

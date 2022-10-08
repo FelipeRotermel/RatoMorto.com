@@ -1,6 +1,7 @@
 <script></script>
 
 <template>
+<label class="container marginNele">
   <div class="container py-5">
     <div class="row">
       <div class="col-lg-4">
@@ -95,10 +96,13 @@
         </div>
     </div>
   </div>
+</label>
 </template>
 
 <style scoped> 
+.marginNele {
+  margin-top:20px;
+}
 
-  
 
 </style>
