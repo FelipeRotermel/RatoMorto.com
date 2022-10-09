@@ -27,7 +27,7 @@
     <div class="carousel-item active">
       <img src="https://image.tmdb.org/t/p/original/xMMrBziwJqrgjerqpNeQvwuwiUp.jpg" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
-        <h1 class="display-1 fw-bold">Top Gun: Maverick</h1>
+        <h1 class="display-1 fw-bold text-start">Top Gun: Maverick</h1>
         <p>Depois de mais de 30 anos de serviço como um dos principais aviadores da Marinha, Pete \"Maverick\" Mitchell está de volta, rompendo os limites como um piloto de testes corajoso. No mundo contemporâneo das guerras tecnológicas, Maverick enfrenta drones e prova que o fator humano ainda é essencial.</p>
       </div>
     </div>
@@ -51,10 +51,6 @@
 </template>
 
 <style scoped>
-
-  .carousel {
-    z-index: -1;
-  }
 
   img {
     height: 800px;

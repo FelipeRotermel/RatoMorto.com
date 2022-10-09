@@ -1,4 +1,24 @@
-<script></script>
+<script>
+  import { mapStores, mapState, mapActions} from 'pinia'
+  import { useGenreStore} from '@/stores/genres'
+  
+  export default {
+    data() {
+      return {};
+    },
+    async created() {
+      await this.get_genres()
+    },
+    computed: {
+      ...mapStores(useGenreStore),
+      ...mapState(useGenreStore, ['genres'])
+    },
+    methods: {
+      ...mapActions(useGenreStore, ['get_genres'])
+    },
+  };
+</script>
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
@@ -12,15 +32,15 @@
             <router-link to="/" class="nav-link active" aria-current="page">Home</router-link>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+            <label for="CheckIndeterminate">
+            <a class="nav-link active dropdown-toggle">Gêneros</a>
+            </label>
+            <input class="form-check-input" id="CheckIndeterminate" type="checkbox">
+            <div id="dropdown">
+              <ul class="dropdown-menu d-flex flex-wrap justify-content-between" aria-labelledby="navbarDropdown">
+                <li v-for="genre of genres" :key="genre.id"><a class="dropdown-item" href="#">{{ genre.name}}</a></li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <router-link to="/login" class="nav-link active" aria-current="page">Login</router-link>
@@ -51,6 +71,7 @@
   .navbar {
     background-color: #f7eccb;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    height: 45px;
   }
 
   a, .navbar-brand{
@@ -67,5 +88,29 @@
 
   .user {
     margin-right: 20px;
+  }
+
+  .form-check-input {
+    display: none;
+  }
+
+  #dropdown{
+    display: none;
+  }
+
+  input:checked + #dropdown {
+    display: contents;
+  }
+
+  label {
+    height: 0;
+  }
+
+  .dropdown-menu {
+    width: 400px;
+  }
+
+  .dropdown-item {
+    width: 150px;
   }
 </style>
