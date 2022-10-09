@@ -14,9 +14,9 @@
 </template>
 
 <style scoped>
-
 .rat {
 height:700px;
+margin-top: 48px;
 }
 
 </style>
