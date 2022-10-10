@@ -25,4 +25,27 @@
         margin: 20px;
     }
 
+    .table {
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+      transition: 0.25s;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffd34f;
+    }
+
 </style>

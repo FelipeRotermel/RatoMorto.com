@@ -24,10 +24,10 @@
 <template>
     <router-link to="/card1">
         <th v-for="movie of movies" :key="movie.id">
-            <div class="col-12 text-center">
+            <div class="text-center">
                 <a :href="movie.id">
                   <img :src="urlfilme + movie.poster_path" alt="">
-                  {{ movie.title }}
+                  <p>{{ movie.title }}</p>
                 </a>
             </div>
         </th>
@@ -43,7 +43,6 @@
     }
 
     th {
-        max-width: 350px;
         height: 550px;
         padding: 25px;
         transition: 0.25s;
