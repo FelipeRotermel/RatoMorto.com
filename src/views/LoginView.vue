@@ -35,7 +35,7 @@
 					Não tem uma conta:<router-link to="/cadastro" class="ml-2">Cadastra-se</router-link>
 				</div>
 				<div class="d-flex justify-content-center links">
-					<a href="#">Esqueceu a sua senha?</a>
+					<RouterLink to="/foof">Esqueceu a sua senha?</RouterLink>
 				</div>
 			</div>
 		</div>
