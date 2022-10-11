@@ -1,8 +1,9 @@
 <script>
-    import Content from "@/components/Content.vue";
+    import PopularMovies from "@/components/PopularMovies.vue";
+    import RatedMovies from "@/components/RatedMovies.vue";
 
     export default {
-        components: { Content }
+        components: { PopularMovies, RatedMovies }
     }
 </script>
 
@@ -12,7 +13,15 @@
         <div class="table text-center">
             <tbody>
                 <tr>
-                    <Content/>
+                    <PopularMovies/>
+                </tr>
+            </tbody>
+        </div>
+        <h3 class="display-4">Mais avaliados</h3>
+        <div class="table text-center">
+            <tbody>
+                <tr>
+                    <RatedMovies/>
                 </tr>
             </tbody>
         </div>

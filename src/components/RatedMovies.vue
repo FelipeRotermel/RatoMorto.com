@@ -1,6 +1,6 @@
 <script>
     import { mapStores, mapState, mapActions} from 'pinia'
-    import { usePopularMovieStore } from '@/stores/popularmovies'
+    import { useRatedMovieStore } from '@/stores/ratedmovies'
     
     export default {
       data() {
@@ -12,22 +12,22 @@
         await this.get_movies()
       },
       computed: {
-        ...mapStores(usePopularMovieStore),
-        ...mapState(usePopularMovieStore, ['movies'])
+        ...mapStores(useRatedMovieStore),
+        ...mapState(useRatedMovieStore, ['movies'])
       },
       methods: {
-        ...mapActions(usePopularMovieStore, ['get_movies'])
+        ...mapActions(useRatedMovieStore, ['get_movies'])
       },
     };
 </script>
 
 <template>
     <router-link to="/card1">
-        <th v-for="movie of movies" :key="movie.id">
+        <th v-for="ratedmovie of movies" :key="ratedmovie.id">
             <div class="text-center">
-                <a :href="movie.id">
-                  <img :src="urlfilme + movie.poster_path" alt="">
-                  <p>{{ movie.title }}</p>
+                <a :href="ratedmovie.id">
+                  <img :src="urlfilme + ratedmovie.poster_path" alt="">
+                  <p>{{ ratedmovie.title }}</p>
                 </a>
             </div>
         </th>

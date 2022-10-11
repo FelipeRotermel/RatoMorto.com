@@ -31,11 +31,11 @@
         <p class="text-start">Depois de mais de 30 anos de serviço como um dos principais aviadores da Marinha, Pete \"Maverick\" Mitchell está de volta, rompendo os limites como um piloto de testes corajoso. No mundo contemporâneo das guerras tecnológicas, Maverick enfrenta drones e prova que o fator humano ainda é essencial.</p>
       </div>
     </div>
-    <div class="carousel-item" v-for="movie of movies" :key="movie.id">
-      <img :src="urlfilme + movie.backdrop_path" class="d-block w-100" alt="">
+    <div class="carousel-item" v-for="popularmovie of movies" :key="popularmovie.id">
+      <img :src="urlfilme + popularmovie.backdrop_path" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block text-start">
-        <h1 class="display-1 fw-bold">{{ movie.title }}</h1>
-        <p>{{ movie.overview}}</p>
+        <h1 class="display-1 fw-bold">{{ popularmovie.title }}</h1>
+        <p>{{ popularmovie.overview}}</p>
       </div>
     </div>
   </div>
