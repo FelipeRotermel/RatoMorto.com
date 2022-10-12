@@ -1,12 +1,12 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-import RatedMoviesApi from '@/api/ratedmovies'
-const ratedmoviesApi = new RatedMoviesApi()
+import MoviesApi from '@/api/ratedmovies'
+const moviesApi = new MoviesApi()
 
-export const useRatedMovieStore = defineStore('ratedmovie', () => {
+export const useMovieStore = defineStore('ratedmovie', () => {
     const movies = ref([])
     async function get_movies() {
-      movies.value = await ratedmoviesApi.getRatedMovies()
+      movies.value = await moviesApi.getMovies()
   
     }
     return { movies , get_movies }

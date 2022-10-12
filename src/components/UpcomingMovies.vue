@@ -1,6 +1,6 @@
 <script>
     import { mapStores, mapState, mapActions} from 'pinia'
-    import { useMovieStore } from '@/stores/popularmovies'
+    import { useMovieStore } from '@/stores/upcomingmovies'
     
     export default {
       data() {
@@ -23,11 +23,11 @@
 
 <template>
     <router-link to="/card1">
-        <th v-for="popularmovie of movies" :key="popularmovie.id">
+        <th v-for="upcomingmovie of movies" :key="upcomingmovie.id">
             <div class="text-center">
-                <a :href="popularmovie.id">
-                  <img :src="urlfilme + popularmovie.poster_path" alt="">
-                  <p>{{ popularmovie.title }}</p>
+                <a :href="upcomingmovie.id">
+                  <img :src="urlfilme + upcomingmovie.poster_path" alt="">
+                  <p>{{ upcomingmovie.title }}</p>
                 </a>
             </div>
         </th>

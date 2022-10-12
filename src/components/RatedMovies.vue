@@ -1,6 +1,6 @@
 <script>
     import { mapStores, mapState, mapActions} from 'pinia'
-    import { useRatedMovieStore } from '@/stores/ratedmovies'
+    import { useMovieStore } from '@/stores/ratedmovies'
     
     export default {
       data() {
@@ -12,11 +12,11 @@
         await this.get_movies()
       },
       computed: {
-        ...mapStores(useRatedMovieStore),
-        ...mapState(useRatedMovieStore, ['movies'])
+        ...mapStores(useMovieStore),
+        ...mapState(useMovieStore, ['movies'])
       },
       methods: {
-        ...mapActions(useRatedMovieStore, ['get_movies'])
+        ...mapActions(useMovieStore, ['get_movies'])
       },
     };
 </script>
