@@ -38,7 +38,9 @@
 </template>
 
 <style scoped>
-
+    .container-fluid {
+        margin-bottom: 120px;
+    }
     h3 {
         margin: 20px;
     }

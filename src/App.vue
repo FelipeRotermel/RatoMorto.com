@@ -11,6 +11,8 @@
   
 <template>
   <NavBar/>
+  <div class="pageContentWrapper">
   <RouterView/>
+  </div>
   <Footer/>
 </template>
