@@ -25,10 +25,9 @@
   <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="https://image.tmdb.org/t/p/original/xMMrBziwJqrgjerqpNeQvwuwiUp.jpg" class="d-block w-100" alt="">
+      <img src="https://img.freepik.com/vetores-premium/rato-fofo-comendo-pipoca-e-assistindo-filme-em-3d_290315-1761.jpg?w=2000" class="d-block w-100" alt="">
       <div class="carousel-caption d-none d-md-block">
-        <h1 class="display-1 fw-bold text-start">Top Gun: Maverick</h1>
-        <p class="text-start">Depois de mais de 30 anos de serviço como um dos principais aviadores da Marinha, Pete \"Maverick\" Mitchell está de volta, rompendo os limites como um piloto de testes corajoso. No mundo contemporâneo das guerras tecnológicas, Maverick enfrenta drones e prova que o fator humano ainda é essencial.</p>
+        <h1 class="display-1 fw-bold text-center">Bem vindo ao site</h1>
       </div>
     </div>
     <div class="carousel-item" v-for="popularmovie of movies" :key="popularmovie.id">
@@ -53,8 +52,12 @@
 <style scoped>
 
   img {
-    height: 800px;
+    height: 900px;
     filter: brightness(50%);
   }
 
+  .text-center {
+    margin-bottom: 350px;
+  }
+  
 </style>

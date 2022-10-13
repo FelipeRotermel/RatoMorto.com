@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-<div class="container h-100">
+<div class="container z">
 	<div class="d-flex justify-content-center h-100">
 		<div class="user_card">
 			<div class="d-flex justify-content-center">
