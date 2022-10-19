@@ -38,7 +38,9 @@
             <input class="form-check-input" id="CheckIndeterminate" type="checkbox">
             <div id="dropdown">
               <ul class="dropdown-menu d-flex flex-wrap justify-content-between" aria-labelledby="navbarDropdown">
-                <li v-for="genre of genres" :key="genre.id"><a class="dropdown-item" href="#">{{ genre.name}}</a></li>
+                <li v-for="genre of genres" :key="genre.id">
+                  <a class="dropdown-item" href="#">{{ genre.name}}</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -69,9 +71,15 @@
 
 <style scoped>
   .navbar {
-    background-color: #f7eccb;
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: transparent;
+    transition: background-color 0.1s linear;
     height: 45px;
+  }
+
+  .navbar.solid {
+  background-color: #f7eccb;
+  transition: background-color 0.7s ease 0s;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
   }
 
   a, .navbar-brand{

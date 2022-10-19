@@ -6,7 +6,7 @@ const genresApi = new GenresApi()
 export const useGenreStore = defineStore('genre', () => {
   const genres = ref([])
   async function get_genres() {
-    genres.value = await genresApi.getAllGenres()
+  genres.value = await genresApi.getAllGenres()
 
   }
   return { genres , get_genres }
