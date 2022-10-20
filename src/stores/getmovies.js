@@ -3,11 +3,10 @@ import { defineStore } from 'pinia'
 import GetMoviesApi from '@/api/getmovies'
 const getmoviesApi = new GetMoviesApi()
 
-export const useMovieStore = defineStore('movie', () => {
-  const movies = ref([])
-  async function get_movies() {
-  movies.value = await getmoviesApi.getAllMovies()
-
+export const useMovieStore = defineStore('getmovie', () => {
+  const movie = ref([])
+  async function get_movies(id) {
+    movie.value = await getmoviesApi.getMovieById(id)
   }
-  return { movies , get_movies }
+  return { movie , get_movies }
 })

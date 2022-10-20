@@ -25,10 +25,12 @@
     <router-link to="/card1">
         <th v-for="ratedmovie of movies" :key="ratedmovie.id">
             <div class="text-center">
+              <router-link :to="`/filme/${ratedmovie.id}`">
                 <a :href="ratedmovie.id">
                   <img :src="urlfilme + ratedmovie.poster_path" alt="">
                   <p>{{ ratedmovie.title }}</p>
                 </a>
+              </router-link>
             </div>
         </th>
     </router-link>
