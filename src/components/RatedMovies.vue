@@ -22,18 +22,17 @@
 </script>
 
 <template>
-    <router-link to="/card1">
         <th v-for="ratedmovie of movies" :key="ratedmovie.id">
+          <router-link :to="`/filme/${ratedmovie.id}`">
             <div class="text-center">
-              <router-link :to="`/filme/${ratedmovie.id}`">
                 <a :href="ratedmovie.id">
                   <img :src="urlfilme + ratedmovie.poster_path" alt="">
                   <p>{{ ratedmovie.title }}</p>
+                  <p class="text-muted fs-6">( {{ ratedmovie.release_date}} )</p>
                 </a>
-              </router-link>
             </div>
+          </router-link>
         </th>
-    </router-link>
 </template>
 
 <style scoped>

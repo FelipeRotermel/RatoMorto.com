@@ -23,14 +23,15 @@
 
 <template>
   <th v-for="popularmovie of movies" :key="popularmovie.id">
-    <div class="text-center">
-              <router-link :to="`/filme/${popularmovie.id}`">
+    <router-link :to="`/filme/${popularmovie.id}`">
+      <div class="text-center">
                 <a :href="popularmovie.id">
                   <img :src="urlfilme + popularmovie.poster_path" alt="">
                   <p>{{ popularmovie.title }}</p>
+                  <p class="text-muted fs-6">( {{ popularmovie.release_date}} )</p>
                 </a>
-              </router-link>
             </div>
+          </router-link>
         </th>
 </template>
 
