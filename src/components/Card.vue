@@ -26,7 +26,7 @@ export default {
   <div class="container-fluid">
     <div class="card mb-3">
       <div class="row g-0">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <img
             :src="urlfilme + movie.poster_path"
             class="img-fluid rounded-start"
@@ -36,6 +36,7 @@ export default {
         </div>
 
         <div class="col-md-8">
+          <img :src="urlfilme + movie.backdrop_path" class="d-block w-100" alt="">
           <div class="card-body">
             <div class="d-flex">
               <p class="card-title display-2"><strong>{{ movie.title }}</strong></p>
@@ -71,12 +72,17 @@ export default {
   margin-top: 145px;
 }
 img {
-  width: 400px;
-  height: 500px;
+  width: 632px;
+  height: 700px;
 }
 
 .fs-4 {
-  margin-top: 25px;
-  margin-left: 20px;
+  margin-top: 25px; 
+}
+
+.d-block{
+  position: absolute;
+  opacity: 0.1;
+  filter: brightness(50%);
 }
 </style>

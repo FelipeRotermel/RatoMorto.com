@@ -90,7 +90,7 @@
    transform: scale(1.1);
   }
 
-  .navbar-brand:hover {
+  .navbar-brand, .navbar-brand:hover {
     color: #ffd34f;
   }
 
