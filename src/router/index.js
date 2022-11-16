@@ -16,6 +16,12 @@ const router = createRouter({
       props: true,
     },
     {
+      path: '/genero/:id',
+      name: 'genero',
+      component: () => import('../views/GenreDetailView.vue'),
+      props: true,
+    },
+    {
       path:'/rat',
       name: 'rat',
       component: () => import('../views/DancingratView.vue')

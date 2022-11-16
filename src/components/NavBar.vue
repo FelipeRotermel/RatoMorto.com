@@ -39,7 +39,9 @@
             <div id="dropdown">
               <ul class="dropdown-menu d-flex flex-wrap justify-content-between" aria-labelledby="navbarDropdown">
                 <li v-for="genre of genres" :key="genre.id">
-                  <a class="dropdown-item" href="#">{{ genre.name}}</a>
+                  <router-link :to="`/genero/${genre.id}`">
+                  <a class="dropdown-item" :href="genre.id">{{ genre.name}}</a>
+                  </router-link>
                 </li>
               </ul>
             </div>
