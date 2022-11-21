@@ -1,6 +1,6 @@
 <script>
     import { mapStores, mapState, mapActions} from 'pinia';
-    import { useGenreStore } from '@/stores/getgenres';
+    import { useGenresStore } from '@/stores/getgenres';
     
     export default {
       data() {
@@ -8,15 +8,16 @@
             urlfilme: "https://image.tmdb.org/t/p/original"
         };
       },
+      props: ["genreId"],
       async created() {
-        await this.get_genres()
+        await this.get_genres(this.genreId);
       },
       computed: {
-        ...mapStores(useGenreStore),
-        ...mapState(useGenreStore, ['genres'])
+        ...mapStores(useGenresStore),
+        ...mapState(useGenresStore, ['genres'])
       },
       methods: {
-        ...mapActions(useGenreStore, ['get_genres'])
+        ...mapActions(useGenresStore, ['get_genres'])
       },
     };
 </script>

@@ -9,5 +9,5 @@ export default {
 </script>
 
 <template> 
-    <Card :genreId="id" />
+    <GenreCard :genreId="id" />
 </template>

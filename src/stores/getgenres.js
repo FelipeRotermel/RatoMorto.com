@@ -4,9 +4,9 @@ import GetGenresApi from '@/api/getgenres'
 const getgenresApi = new GetGenresApi()
 
 export const useGenresStore = defineStore('getgenre', () => {
-  const genre = ref([])
+  const genres = ref([])
   async function get_genres(id) {
-    genre.value = await getgenresApi.getGenreById(id)
+    genres.value = await getgenresApi.getGenresById(id)
   }
-  return { genre , get_genres }
+  return { genres , get_genres }
 })
