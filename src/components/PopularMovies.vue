@@ -5,7 +5,6 @@
     export default {
       data() {
         return {
-            urlfilme: "https://image.tmdb.org/t/p/original"
         };
       },
       async created() {
@@ -16,7 +15,10 @@
         ...mapState(useMovieStore, ['movies'])
       },
       methods: {
-        ...mapActions(useMovieStore, ['get_movies'])
+        ...mapActions(useMovieStore, ['get_movies']),
+        getPoster(path) {
+        return `https://image.tmdb.org/t/p/original/${path}`
+        },
       },
     };
 </script>
@@ -26,7 +28,7 @@
     <router-link :to="`/filme/${popularmovie.id}`">
       <div class="text-center">
                 <a :href="popularmovie.id">
-                  <img :src="urlfilme + popularmovie.poster_path" alt="">
+                  <img :src="getPoster(popularmovie.poster_path)" alt="">
                   <p>{{ popularmovie.title }}</p>
                   <p class="text-muted fs-6">( {{ popularmovie.release_date}} )</p>
                 </a>

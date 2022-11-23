@@ -22,6 +22,11 @@ const router = createRouter({
       props: true,
     },
     {
+      path:'/MovieSearch',
+      name:'/MovieSearch',
+      component: () => import('../components/MovieSearch.vue')
+    },
+    {
       path:'/rat',
       name: 'rat',
       component: () => import('../views/DancingratView.vue')

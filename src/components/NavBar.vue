@@ -47,6 +47,9 @@
             </div>
           </li>
           <li class="nav-item">
+            <router-link to="/MovieSearch" class="nav-link active" aria-current="page">Pesquisa</router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/login" class="nav-link active" aria-current="page">Login</router-link>
           </li>
         </ul>
@@ -62,10 +65,6 @@
             <li><a class="dropdown-item" href="#">Sair</a></li>
           </ul>
         </div>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Procurar" aria-label="Search">
-          <button class="btn btn-outline-dark" type="submit">Buscar</button>
-        </form>
       </div>
     </div>
   </nav>

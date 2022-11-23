@@ -24,7 +24,7 @@ export default {
 
 <template>
   <div class="container-fluid">
-    <div class="card mb-3">
+    <div v-if="movie" class="card mb-3">
       <div class="row g-0">
         <img :src="urlfilme + movie.backdrop_path" class="d-block w-100" alt="">
         <div class="col-md-4">
