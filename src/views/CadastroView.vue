@@ -51,7 +51,7 @@
 
 .container {
 margin-top: 150px;
-margin-bottom: 100px;
+margin-bottom: 150px;
 }
 
 body, html {

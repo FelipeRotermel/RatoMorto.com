@@ -53,17 +53,11 @@
             <router-link to="/login" class="nav-link active" aria-current="page">Login</router-link>
           </li>
         </ul>
-        <div class="dropdown user">
-          <a href="#" class="d-flex align-items-center text-black text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="user">
+          <router-link  to="/profile" class="d-flex align-items-center text-black text-decoration-none" aria-expanded="false">
             <img src="https://avatars.githubusercontent.com/u/106554495?v=4" alt="" width="32" height="32" class="rounded-circle me-2">
             <strong>User</strong>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-            <li><router-link to="/profile" class="dropdown-item">Perfil</router-link></li>
-            <li><a class="dropdown-item" href="#">Configurações</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Sair</a></li>
-          </ul>
+          </router-link>
         </div>
       </div>
     </div>
@@ -122,4 +116,9 @@
   .dropdown-item {
     width: 150px;
   }
+
+  .text-small {
+    width: 50px;
+  }
+
 </style>

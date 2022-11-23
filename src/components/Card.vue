@@ -66,13 +66,14 @@ export default {
 <style scoped>
 .container-fluid {
   margin-top: 100px;
+  margin-bottom: 150px;
 }
 
 .progress {
   margin-top: 145px;
 }
 img {
-  height: 700px;
+  height: 650px;
 }
 
 .fs-4 {

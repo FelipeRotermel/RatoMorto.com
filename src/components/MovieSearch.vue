@@ -34,11 +34,12 @@ export default {
 <template>
     <div class="container-fluid text-center">
         <form @submit.prevent="searchId">
-            <div class="col-12 display-5">Pesquisa de Filme</div>
-            <input type="text" v-model="searchId">
+            <div class="col-12 display-5 fw-bold">Pesquisa de Filme
+              <input type="text" class="form-control text-center" placeholder="Tropa de Elite" aria-label="Tropa de Elite" aria-describedby="basic-addon1" v-model="searchId">
+            </div>
         </form>
     </div>
-  <div class="table text-center">
+  <div class="table d-flex justify-content-center">
     <th v-for="movie of movies" :key="movie.id">
       <router-link :to="`/filme/${movie.id}`">
         <div class="text-center">
@@ -54,8 +55,8 @@ export default {
 </template>
 
 <style scoped>
-a,
-p {
+
+a,p {
   text-decoration: none;
   color: black;
   font-size: 20px;
@@ -65,6 +66,10 @@ th {
   height: 550px;
   padding: 25px;
   transition: 0.25s;
+}
+
+input {
+  margin-top: 20px;
 }
 
 img {
@@ -82,27 +87,28 @@ th:hover {
 }
 
 .table {
-        overflow: auto;
-        white-space: nowrap;
-        margin-top: 5%;
-    }
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 5%;
+  margin-bottom: 150px;
+}
 
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
+::-webkit-scrollbar {
+  width: 10px;
+}
     
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
     
-    ::-webkit-scrollbar-thumb {
-      background: #888;
-      border-radius: 10px;
-      transition: 0.25s;
-    }
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  transition: 0.25s;
+}
 
-    ::-webkit-scrollbar-thumb:hover {
-      background: #ffd34f;
-    }
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd34f;
+}
   
 </style>
