@@ -39,8 +39,8 @@ export default {
             </div>
         </form>
     </div>
-  <div class="table d-flex justify-content-center">
-    <th v-for="movie of movies" :key="movie.id">
+  <div class="table d-flex">
+    <th class="flex-fill" v-for="movie of movies" :key="movie.id">
       <router-link :to="`/filme/${movie.id}`">
         <div class="text-center">
           <a :href="movie.id">
@@ -83,7 +83,7 @@ th:hover {
 }
 
 .container-fluid{
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 .table {

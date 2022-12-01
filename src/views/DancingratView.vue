@@ -14,6 +14,12 @@
 </template>
 
 <style scoped>
+
+body {
+    min-height: 450px;
+    height: 100vh;
+    margin: 0;
+}
 .rat {
 height:700px;
 margin-top: 48px;
